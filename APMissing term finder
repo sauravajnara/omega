@@ -1,0 +1,114 @@
+package justtry;
+import java.util.*;
+
+public class APMissing {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		
+	 int N,d1,d2;
+	 int md;
+	 int count;
+	Scanner sc= new Scanner(System.in);
+	System.out.print("Enter the value of N: ");
+    	   N= sc.nextInt();
+	//System.out.println(N);
+
+		if((N<3) || (N>2500))
+		{
+		System.out.println("Incorrect Value");
+		System.exit(1);
+		}
+		
+		int  al[]  = new int[N];
+		
+		System.out.print("Enter the Series: ");
+ 
+		for(int f=0;f<N;f++)
+		{
+//			System.out.println("Enter the Series");
+			al[f]=sc.nextInt();
+			//System.out.println();
+		}
+			
+		System.out.println(al.length);
+		d1=al[1]-al[0];
+        d2=al[2]-al[1];
+		System.out.println(d1);
+		System.out.println(d2);
+
+
+        if(N==3)
+          {
+        	if(d1==(2*d2))
+        	{
+        		md=d2;
+        		System.out.println("Second term missing");
+        		System.out.println("Missing term is :" +(al[0]+md));
+        	}
+        	else
+        	{
+        		if(d2==(2*d1))
+        		{
+        			md=d1;
+        			System.out.println("Third term is missing");
+        			System.out.println("Missing term is :"+(al[1]+md));
+        			
+        		}
+        	}
+        	
+        	
+        	
+           }
+        else
+        {
+        	if(d1==d2)
+        	{
+        		count=0;
+        		while(count<=al.length)
+        		{
+        			if((al[count]+d1)==al[count+1])
+        			{
+        				System.out.println("No Missing term found yet !!");
+        				System.out.println("");
+        				count++;
+        			}
+        			else
+        			{
+        				System.out.println("Missing term found at :"+(count+1)+ " Location");
+        				System.out.println("Missing term is :"+(al[count]+d1));
+        				break;
+        				
+        			}
+        		}
+        		System.out.println("out of while loop");
+        	}
+        	else
+        	{
+        	if(d1==(2*d2))
+        	{
+        		md=d2;
+        		System.out.println("Second term missing");
+        		System.out.println("Missing term is :" +(al[0]+md));
+        	}
+        	else
+        	{
+        		if(d2==(2*d1))
+        		{
+        			md=d1;
+        			System.out.println("Third term is missing");
+        			System.out.println("Missing term is :"+(al[1]+md));
+        			
+        		}
+        	
+        }
+                           
+        	} 
+	
+        }
+		
+	}
+
+}
