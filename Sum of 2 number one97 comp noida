@@ -1,0 +1,41 @@
+import java.util.*;
+
+
+
+class SumTwo
+{ 
+	public static void main(String [] arg)
+	{
+		int t,n1;
+		static ind=1;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter value for test case");
+		t=sc.nextInt();
+		int num[] = new int[2*t];
+		num[0]=0;
+		System.out.println("Enter the value of Numbers");
+		for(int i=1;i<=num.length;i++)
+		{
+			num[i]=sc.nextInt();
+			if((num[i]<1) ||(num[i]>1000000000))
+			    break;
+			     
+		}
+		if(((t<1) ||(t>1000000000)
+		{
+			System.exit(1);
+		}
+		int n=0;
+		while(n<t)
+		{
+			  n1=1;
+			while(n1<=2)
+			{
+		        System.out.println("Sum = "+(num[ind]+num[ind+1]));
+		        n1++;
+			}
+		  n++;
+		}
+		
+	}
+}
